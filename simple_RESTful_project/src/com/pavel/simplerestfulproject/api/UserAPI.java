@@ -13,6 +13,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /*
  * before using this class first read the comments
@@ -22,8 +23,8 @@ import javax.ws.rs.Produces;
  * to the url and start sending requests
  * */
 @Path("/user")
-@Consumes({ "application/json" })
-@Produces({ "application/json" })
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class UserAPI {
 	private static boolean IS_USERS_TABLE_CREATED = false;
 
